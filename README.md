@@ -32,3 +32,20 @@ experiment tracking, deployment, and monitoring.
 ## Running the API
 
 ## Future Improvements
+
+## Final Architecture
+```r
+Data Source
+     ↓
+EDA + Feature Engineering
+     ↓
+Model Training
+     ↓
+Experiment Tracking
+     ↓
+Pipeline Automation
+     ↓
+FastAPI Model Service
+     ↓
+Prediction API
+```
