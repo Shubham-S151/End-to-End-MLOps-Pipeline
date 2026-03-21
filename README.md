@@ -1,4 +1,4 @@
-# End-to-End MLOps Platform
+# End-to-End MLOps Pipeline
 
 Automated machine learning lifecycle platform that handles
 data ingestion, validation, feature engineering, model training,
