@@ -1,12 +1,12 @@
 {
     "target_col": "is_fraud",
-    "num_cols": [
+    "uniq_cols": [
         "cc_num",
+        "trans_num"
+    ],
+    "num_cols": [
         "amt",
-        "zip",
-        "city_pop",
-        "unix_time",
-        "is_fraud"
+        "city_pop"
     ],
     "cat_cols": [
         "merchant",
