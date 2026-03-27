@@ -1,0 +1,77 @@
+End-to-End-MLOps-Pipeline/
+│
+├── api/                          # serving layer
+│   ├── config.yml                # central config (paths, params, thresholds)
+│   └── main.py                   # FastAPI entrypoint
+│
+├── data/                         # datasets
+│   ├── raw/                      # raw incoming data
+│   ├── processed/                # cleaned/engineered data
+│   └── descriptions/             # data dictionaries
+│       ├── DataDictionary-CreditCardFraudDetection.csv
+│       └── DataDictionary-TelecomChurnCaseStudy.csv
+│
+├── docker/                       # containerization
+│   ├── Dockerfile
+│   └── compose.yml
+│
+├── docs/                         # documentation
+│   ├── architecture.md           # system architecture
+│   ├── pipeline_flow.md          # pipeline orchestration flow
+│   └── _ignore_/                 # personal notes
+│       ├── mlops platform structure.md
+│       └── read_me.md
+│
+├── notebooks/                    # exploratory notebooks
+│   ├── Credit_Card_Fraud_Data/
+│   ├── Telecom_Churn_Data/
+│   ├── metadata/
+│   └── module_development_test_Notebooks/
+│
+├── pipeline.py                   # orchestrator (end-to-end workflow)
+│
+├── src/                          # modular codebase
+│   ├── common/                   # reusable utilities
+│   │   ├── utils.py
+│   │   ├── data_validation.py
+│   │   ├── visualization.py
+│   │   └── constants.py
+│   │
+│   ├── data_science/             # DS modules (EDA, prep)
+│   │   ├── data_inspection.py
+│   │   ├── descriptive_analysis.py
+│   │   ├── data_cleaning.py
+│   │   ├── inferential_analysis.py
+│   │   ├── feature_engineering.py
+│   │   └── preprocessing.py
+│   │
+│   ├── ml_engineering/           # ML engineering modules
+│   │   ├── data_ingestion.py
+│   │   ├── model_training.py
+│   │   ├── model_evaluation.py
+│   │   ├── mlflow_tracking.py
+│   │   ├── deployment_fastapi.py
+│   │   └── monitoring_evidently.py
+│
+├── models/                       # trained artifacts
+│   └── fraud_model.pkl
+│
+├── reports/                      # auto-generated reports
+│   └── eda_report.html
+│
+├── monitoring/                   # drift reports, logs
+│   └── drift_report.json
+│
+├── tests/                        # unit & integration tests
+│   ├── test_data_ingestion.py
+│   ├── test_data_cleaning.py
+│   ├── test_model_training.py
+│   └── test_pipeline.py
+│
+├── ci-cd/                        # workflows (GitHub Actions, Azure DevOps)
+│   └── pipeline.yml
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
