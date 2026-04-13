@@ -27,9 +27,9 @@ logs/
 data/raw/
 data/processed/
 data/interim/
-!data/interim/feature_metadata.json
-!data/interim/scaler.pkl
-!data/interim/imputer.pkl
+!data/interim/fraud_data/feature_metadata.json
+!data/interim/fraud_data/scaler.pkl
+!data/interim/fraud_data/imputer.pkl
 
 # OS files
 .DS_Store
