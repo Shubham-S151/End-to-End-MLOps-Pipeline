@@ -35,6 +35,7 @@ data/interim/fraud_data/X_test.csv
 data/interim/fraud_data/X_train.csv
 data/interim/fraud_data/y_test.csv
 data/interim/fraud_data/y_train.csv
+
 # OS files
 .DS_Store
 Thumbs.db
