@@ -26,20 +26,11 @@ logs/
 # Data files (large datasets)
 data/raw/
 data/processed/
-<<<<<<< HEAD
-<<<<<<< HEAD
-# !data/interim/
-# !data/interim/fraud_data/feature_metadata.json
-# !data/interim/fraud_data/scaler.pkl
-# !data/interim/fraud_data/imputer.pkl
-=======
-=======
->>>>>>> parent of 46f7a2b (important artifacts for modelling and deployment)
-data/interim/
+data/interim/*
+!data/interim/fraud_data/
 !data/interim/fraud_data/feature_metadata.json
 !data/interim/fraud_data/scaler.pkl
 !data/interim/fraud_data/imputer.pkl
->>>>>>> parent of 46f7a2b (important artifacts for modelling and deployment)
 
 # OS files
 .DS_Store
