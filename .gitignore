@@ -26,7 +26,7 @@ logs/
 # Data files (large datasets)
 data/raw/
 data/processed/
-data/interim/*
+!data/interim/
 !data/interim/fraud_data/
 !data/interim/fraud_data/feature_metadata.json
 !data/interim/fraud_data/scaler.pkl
