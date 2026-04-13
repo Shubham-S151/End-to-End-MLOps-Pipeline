@@ -26,6 +26,7 @@ logs/
 # Data files (large datasets)
 data/raw/
 data/processed/
+data/interim/
 
 # OS files
 .DS_Store
