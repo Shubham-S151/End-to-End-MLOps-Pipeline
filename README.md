@@ -24,6 +24,11 @@ An industry-level **End-to-End Machine Learning Platform** that demonstrates the
 
 This project is designed to showcase **Data Science + Machine Learning Engineering + MLOps** skills in a production-style architecture.
 
+#### Repository Stats
+![GitHub stars](https://img.shields.io/github/stars/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
+![GitHub forks](https://img.shields.io/github/forks/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
+![GitHub issues](https://img.shields.io/github/issues/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
+
 ---
 
 ## Problem Statements
