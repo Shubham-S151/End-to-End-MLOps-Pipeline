@@ -1,5 +1,23 @@
 # Working on it ......
 ---
+
+# Current Progress (v1)
+
+**App link:**  [Click Here](https://end-to-end-mlops-platform.streamlit.app/)\
+**Project link:** [Click Here](https://github.com/Shubham-S151/End-to-End-MLOps-Pipeline)
+
+The project has successfully reached its first deployed version with core functionality implemented and validated.
+
+## Completed
+- End-to-end ML pipeline development (data preprocessing → model → inference)
+- Fraud detection model training and evaluation
+- Streamlit web application for user interaction
+- Batch prediction using CSV upload
+- Single transaction prediction interface
+- Model integration with deployed UI
+- Initial deployment on Streamlit Cloud
+
+---
 # End-to-End MLOps Platform
 
 An industry-level **End-to-End Machine Learning Platform** that demonstrates the complete lifecycle of ML systems — from data ingestion and analysis to model deployment and monitoring.
