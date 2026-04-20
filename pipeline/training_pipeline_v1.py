@@ -25,7 +25,7 @@ print(scale_pos_weight)
 model = XGBClassifier(scale_pos_weight=scale_pos_weight, random_state=42)
 
 pipe = build_pipeline(model)
-
+print(X_train.columns)
 pipe.fit(X_train, y_train)
 
 save_pipeline(pipe, "pipeline.pkl")
