@@ -28,8 +28,8 @@ This project is designed to showcase **Data Science + Machine Learning Engineeri
 ![GitHub stars](https://img.shields.io/github/stars/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
 ![GitHub forks](https://img.shields.io/github/forks/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
 ![GitHub issues](https://img.shields.io/github/issues/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
-![GitHub clones](https://img.shields.io/github/clones/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
-![GitHub profile visits](https://img.shields.io/github/profile_visits/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
+![GitHub license](https://img.shields.io/github/license/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
 
 ---
 
