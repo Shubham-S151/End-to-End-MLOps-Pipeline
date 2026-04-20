@@ -15,7 +15,7 @@ sys.path.append(BASE_DIR)
 # -----------------------------
 @st.cache_resource
 def load_pipeline():
-    with open(os.path.join(BASE_DIR,"streamlit_app\pipeline.pkl"), "rb") as f:
+    with open(os.path.join(BASE_DIR,"streamlit_app","pipeline.pkl"), "rb") as f:
         return pickle.load(f)
 
 pipe = load_pipeline()
