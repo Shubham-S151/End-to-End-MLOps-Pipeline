@@ -17,7 +17,19 @@ print(ROOT_DIR)
 
 zip_data_path = os.path.join(ROOT_DIR,"data","raw_for_webuse","Data.zip")
 
-with open(zip_data_path,'wb') as zipf:
-    files = zipfile.ZipExtFile.read(zipf)
+with zipfile.ZipFile(zip_data_path, 'r') as z:
+    csv_files = [f for f in z.namelist() if f.endswith('.csv')]
+    dfs = {f: pd.read_csv(z.open(f)) for f in csv_files}
 
-print(files)
+# Access your dataframes
+data = dfs.get("fraud test.csv").head()
+data = data[data.columns[1:]]
+
+# Streamlit Dashboard Making
+st.title("Credit Card Fraud Analysis Dashboard")
+st.write("#### A comprehensive study of patterns of frauds in data")
+st.write("---")
+st.write("### Data Preview")
+st.dataframe(data.head())
+
+# 
