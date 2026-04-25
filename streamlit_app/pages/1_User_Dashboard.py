@@ -8,6 +8,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import calendar
 
+
 # =========================================================
 # PAGE CONFIG (FAST UI LOAD)
 # =========================================================
