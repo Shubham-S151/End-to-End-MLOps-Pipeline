@@ -89,4 +89,3 @@ def test_convert_dtypes():
     assert converted["B"].dtype == "float64"
     assert converted["A"].sum() == 6
     assert np.isclose(converted["B"].sum(), 6.6)
-# 
