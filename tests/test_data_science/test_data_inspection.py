@@ -12,7 +12,7 @@ import pytest
 #     basic_info
 # )
 
-from your_module import (
+from src.data_science.data_inspection import (
     inspect_shape,
     inspect_types,
     preview_data,
@@ -20,7 +20,7 @@ from your_module import (
     missing_values_summary,
     unique_values_summary,
     basic_info
-)
+) 
 
 
 @pytest.fixture

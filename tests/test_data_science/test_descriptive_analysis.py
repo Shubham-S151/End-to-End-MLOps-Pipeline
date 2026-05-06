@@ -5,7 +5,7 @@ import matplotlib
 # Use non-interactive backend for tests
 matplotlib.use("Agg")
 
-from your_module_name import (
+from src.data_science.descriptive_analysis import (
     summary_statistics,
     plot_histograms,
     plot_boxplots,

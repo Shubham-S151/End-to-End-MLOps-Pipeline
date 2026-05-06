@@ -2,7 +2,7 @@ from src.common import data_validation
 
 import pytest
 import pandas as pd
-from data_validation import (
+from src.common.data_validation import (
     validate_schema,
     check_missing_values,
     check_duplicates,

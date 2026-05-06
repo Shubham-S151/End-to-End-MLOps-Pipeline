@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import pytest
 
-from data_cleaning import (
+from src.data_science.data_cleaning import (
     check_missing,
     check_duplicates,
     remove_duplicates,
