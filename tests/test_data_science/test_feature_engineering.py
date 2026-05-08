@@ -10,7 +10,6 @@ from src.data_science.feature_engineering import (
     select_features,
 )
 
-
 def test_create_date_features():
     df = pd.DataFrame({
         "date": ["2024-01-01", "2024-01-06"]
