@@ -13,7 +13,8 @@ on:
 
 jobs:
   test:
-    runs-on: Windows
+    runs-on: ubuntu-latest
+    # runs-on: Windows
 
     strategy:
       matrix:
