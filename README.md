@@ -31,6 +31,7 @@ This project is designed to showcase **Data Science + Machine Learning Engineeri
 ![GitHub issues](https://img.shields.io/github/issues/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
 ![GitHub license](https://img.shields.io/github/license/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
+![CI](https://github.com/Shubham-S151/End-to-End-MLOps-Pipeline/actions/workflows/ci.yml/badge.svg)
 
 ---
 
