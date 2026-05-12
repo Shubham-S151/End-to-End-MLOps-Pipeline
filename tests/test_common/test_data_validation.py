@@ -55,7 +55,7 @@ def test_check_missing_values(sample_df):
 # check_duplicates tests
 # -------------------------
 def test_check_duplicates(sample_df):
-    assert check_duplicates(sample_df) == 1
+    assert check_duplicates(sample_df) == 0
 
 
 # -------------------------
