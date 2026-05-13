@@ -1,31 +1,22 @@
-# Working on it ......
-Status: Version-1 released  
----
+# End-to-End Machine Learning Pipeline (MLOps-Inspired System)
 
-# Current Progress (v1)
+An industry-style machine learning project that demonstrates an end-to-end ML workflow including data ingestion, feature engineering, model training, evaluation, and a working inference application.
 
-**App link:**  [Click Here](https://end-to-end-mlops-platform.streamlit.app/)\
-**Project link:** [Click Here](https://github.com/Shubham-S151/End-to-End-MLOps-Pipeline)
+The project is currently in active development, with MLOps components being progressively integrated into a modular and production-style architecture.
 
-The project has successfully reached its first deployed version with core functionality implemented and validated.
-
-## Completed
-- End-to-end ML pipeline development (data preprocessing → model → inference)
-- Fraud detection model training and evaluation
-- Streamlit web application for user interaction
-- Batch prediction using CSV upload
-- Single transaction prediction interface
-- Model integration with deployed UI
-- Initial deployment on Streamlit Cloud
+It is designed to showcase practical skills in:
+- Unit testing for data science and preprocessing modules
+- CI pipeline integration using GitHub Actions
+- Machine Learning workflow design
+- Data Science and feature engineering
+- Software engineering practices for ML systems
+- Model deployment (in progress)
+- MLOps foundations (MLflow, FastAPI, monitoring modules)
 
 ---
-# End-to-End MLOps Platform
 
-An industry-level **End-to-End Machine Learning Platform** that demonstrates the complete lifecycle of ML systems — from data ingestion and analysis to model deployment and monitoring.
+## Repository Information
 
-This project is designed to showcase **Data Science + Machine Learning Engineering + MLOps** skills in a production-style architecture.
-
-#### Repository Stats
 ![GitHub stars](https://img.shields.io/github/stars/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
 ![GitHub forks](https://img.shields.io/github/forks/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
 ![GitHub issues](https://img.shields.io/github/issues/Shubham-S151/End-to-End-MLOps-Pipeline.svg)
@@ -35,234 +26,286 @@ This project is designed to showcase **Data Science + Machine Learning Engineeri
 
 ---
 
-## Problem Statements
+## Live Application
 
-This platform supports multiple real-world ML problems:
-
-1. **Customer Churn Prediction**
-   - Predict whether a customer will leave a telecom service.
-
-2. **Credit Card Fraud Detection**
-   - Detect fraudulent financial transactions.
+- Streamlit App: https://end-to-end-mlops-platform.streamlit.app/  
+- GitHub Repository: https://github.com/Shubham-S151/End-to-End-MLOps-Pipeline  
 
 ---
 
-## Project Architecture
+## Project Status
 
-```md
+### Version 1 (Active Development)
+
+The project currently implements a working end-to-end machine learning pipeline with a functional Streamlit-based inference interface.
+
+The MLOps layer is under active development and not fully production-ready yet.
+
+### Completed Components
+
+- Data ingestion and preprocessing pipeline
+- Exploratory data analysis (EDA)
+- Feature engineering pipeline
+- Model training and evaluation pipeline
+- Scikit-learn pipeline integration
+- Streamlit-based user interface
+- Batch prediction using CSV upload
+- Single prediction interface
+- Modular project structure
+
+### Work in Progress
+
+- FastAPI deployment layer integration
+- MLflow experiment tracking stabilization
+- ML engineering module (`src/ml_engineering`)
+- Monitoring and drift detection integration
+- CI/CD pipeline improvements
+
+---
+
+## Problem Statements
+
+### 1. Customer Churn Prediction
+
+Predict whether a telecom customer is likely to leave the service.
+
+Business objectives:
+- Improve customer retention
+- Reduce churn-related revenue loss
+- Enable targeted retention strategies
+
+---
+
+### 2. Credit Card Fraud Detection
+
+Detect fraudulent financial transactions using machine learning models.
+
+Business objectives:
+- Reduce financial fraud risk
+- Improve transaction security
+- Enable scalable fraud detection systems
+
+---
+
+## System Architecture
+
+```text
 Raw Data
-↓
-EDA (Notebooks)
-↓
+   ↓
+Exploratory Data Analysis
+   ↓
 Data Ingestion
-↓
+   ↓
 Data Validation
-↓
+   ↓
 Feature Engineering
-↓
+   ↓
+Scikit-learn Pipeline
+   ↓
 Model Training
-↓
+   ↓
 Model Evaluation
-↓
-MLflow Tracking
-↓
-Pipeline Automation
-↓
-FastAPI Deployment
-↓
-Monitoring (Evidently)
+   ↓
+Streamlit Inference Application
 ```
+
+(MLOps components under development)
+- MLflow experiment tracking (implemented in notebooks, integration in pipeline ongoing)
+- FastAPI Deployment Layer
+- Monitoring and Drift Detection
+
 
 ---
 
 ## Project Structure
 
-```md
+```bash
 end-to-end-mlops-platform/
 │
-├── src/
-│ ├── data_ingestion/
-│ ├── data_validation/
-│ ├── feature_engineering/
-│ ├── model_training/
-│ └── model_evaluation/
+├── api/
+│   └── main.py                      # FastAPI service (in progress)
 │
 ├── pipeline/
-│ └── training_pipeline.py
+│   ├── complete_pipeline_v1.py
+│   └── training_pipeline_v1.py
 │
-├── notebooks/
-│ ├── EDA_telecom_churn.ipynb
-│ └── EDA_fraud_transactions.ipynb
+├── src/
+│   ├── common/                      # Shared utilities
+│   ├── data_science/                # EDA, preprocessing, feature engineering
+│   ├── ml_engineering/              # ML deployment & tracking (in progress)
+│   └── Project_Details.md
 │
-├── data/
-│ ├── raw/
-│ ├── processed/
-│ └── external/
+├── streamlit_app/
+│   ├── pages/
+│   ├── app.py                       # Main UI
+│   └── pipeline.pkl                 # Serialized model pipeline
 │
-├── api/
-│ └── main.py
-│
-├── docker/
-│
-├── artifacts/
-│
+├── notebooks/                       # EDA and experimentation
+├── tests/                           # Unit tests for modules
+├── data/                            # Raw and processed datasets
+├── .github/workflows/               # CI pipeline
+├── docker/                          # Containerization setup (planned)
+├── docs/                            # Internal development notes
+├── mlflow.db                        # Experiment tracking database
 ├── requirements.txt
-├── README.md
-└── LICENSE
+└── README.md
 ```
 
+---
+
+## Dataset Information
+
+### Telecom Churn Dataset
+
+* Type: Classification
+* Domain: Customer retention analytics
+
+### Credit Card Fraud Dataset
+
+* Type: Imbalanced classification
+* Domain: Financial fraud detection
 
 ---
 
-## Datasets Used
-
-### 1. Telecom Customer Churn Dataset
-- Business problem: Customer retention
-- Type: Classification
-
-### 2. Credit Card Fraud Detection Dataset
-- Business problem: Fraud detection
-- Type: Imbalanced classification
-
----
-
-## Tech Stack
+## Technology Stack
 
 ### Data Science
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
 
 ### Visualization
-- Matplotlib
-- Seaborn
 
-### MLOps & Engineering
-- MLflow (Experiment Tracking)
-- FastAPI (Model Serving)
-- Apache Airflow (Pipeline Orchestration)
-- Evidently AI (Monitoring)
+* Matplotlib
+* Seaborn
+
+### Machine Learning Pipeline
+
+* Scikit-learn Pipelines
+* Feature engineering modules
+* Model evaluation framework
+
+### MLOps Components (Partial / In Progress)
+
+* MLflow (experiment tracking)
+* FastAPI (model serving layer)
+* Evidently AI (monitoring integration - planned)
 
 ### Deployment
-- Docker
+
+* Streamlit Cloud (current deployment)
 
 ---
 
-## Pipeline Stages
+## Pipeline Overview
 
 ### 1. Data Ingestion
-- Load raw datasets
-- Train-test split
-- Store artifacts
+
+* Load raw datasets
+* Train-test split
+* Store processed artifacts
 
 ### 2. Data Validation
-- Schema validation
-- Missing value checks
-- Data consistency checks
+
+* Schema validation
+* Missing value checks
+* Data consistency checks
 
 ### 3. Feature Engineering
-- Encoding categorical variables
-- Scaling numerical features
-- Creating derived features
+
+* Encoding categorical variables
+* Scaling numerical features
+* Feature transformation pipeline
 
 ### 4. Model Training
-- Train multiple ML models
-- Hyperparameter tuning
+
+* Multiple ML models trained
+* Hyperparameter tuning
+* Best model selection
 
 ### 5. Model Evaluation
-- Compare models using metrics
-- Select best-performing model
 
-### 6. Experiment Tracking
-- Log experiments using MLflow
-- Track metrics and parameters
+* Performance comparison
+* Metric-based model selection
 
-### 7. Deployment
-- Serve model using FastAPI
-- REST API endpoint for predictions
+### 6. Streamlit Deployment
 
-### 8. Monitoring
-- Detect data drift
-- Monitor model performance
+* Interactive prediction interface
+* Batch prediction support
 
 ---
 
-## How to Run the Project
-
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/Shubham-S151/end-to-end-mlops-platform.git
-cd end-to-end-mlops-platform
-```
-### 2. Create Virtual Environment
-```bash
-python -m venv venv
-venv\Scripts\activate   # Windows
-```
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-### 4. Run Training Pipeline
-```bash
-python pipeline/training_pipeline.py
-```
-### 5. Run API
-```bash
-uvicorn api.main:app --reload
-```
 ## Skills Demonstrated
-### Data Scientist Skills
 
-- Exploratory Data Analysis (EDA)
-- Feature Engineering
-- Model Building & Evaluation
-- Handling Imbalanced Data
+### Machine Learning
 
-### ML Engineer Skills
+* End-to-end ML pipeline design
+* Feature engineering
+* Model training and evaluation
+* Handling imbalanced datasets
 
-- Pipeline Design
-- Modular Code Architecture
-- Experiment Tracking
-- Model Deployment
+### Software Engineering
 
-### MLOps Skills
+* Modular project architecture
+* Reusable code structure
+* Separation of concerns
 
-- End-to-End ML Workflow
-- API Development
-- Containerization
-- Monitoring & Drift Detection
+### MLOps (Foundational / In Progress)
 
-### Key Highlights
+* MLflow experiment tracking (in progress)
+* FastAPI service design (in progress)
+* Monitoring architecture design (planned)
 
-- Modular and scalable ML pipeline
-- Supports multiple datasets and use cases
-- Production-style project structure
-- End-to-end automation from data to deployment
+---
 
-### Future Improvements
+## Key Highlights
 
-- CI/CD integration
-- Cloud deployment (AWS/GCP/Azure)
-- Real-time streaming pipeline
-- Advanced model monitoring
+* Clean modular architecture
+* Real-world ML use cases
+* End-to-end pipeline implementation
+* Working inference application
+* CI workflow integration
+* Production-style project structure (in development)
+
+---
+
+## Future Improvements
+
+* Full FastAPI deployment integration
+* Complete MLflow tracking pipeline
+* Docker containerization
+* CI/CD automation pipeline
+* Cloud deployment (AWS / GCP / Azure)
+* Real-time streaming inference system
+* Advanced monitoring and drift detection
+* Model registry implementation
+
+---
+
+## Contributing
+
+Contributions are welcome.
+
+Steps:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make changes
+4. Submit a pull request
+
+---
 
 ## License
 
 This project is licensed under the MIT License.
 
-## Contributing
-
-Contributions are welcome! Feel free to fork the repo and submit pull requests.
+---
 
 ## Contact
 
-For queries or collaboration, connect via:
+Shubham
 
-- [Linkedin](https://www.linkedin.com/in/shubham-data-science/)
-- [GitHub](https://github.com/Shubham-S151)
-
-
----
+- LinkedIn: [https://www.linkedin.com/in/shubham-data-science/](https://www.linkedin.com/in/shubham-data-science/)
+- GitHub: [https://github.com/Shubham-S151](https://github.com/Shubham-S151)
