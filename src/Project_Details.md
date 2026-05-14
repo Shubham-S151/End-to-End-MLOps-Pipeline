@@ -1,3 +1,5 @@
+> Currrently the CI-pipeline is deployed
+
 # Final Project Document: Plug-and-Play End-to-End MLOps Platform
 
 ## Project Overview
