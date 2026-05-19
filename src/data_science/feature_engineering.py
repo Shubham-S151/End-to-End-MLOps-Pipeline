@@ -1,3 +1,5 @@
+import os
+import json
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler, MinMaxScaler
@@ -47,12 +49,6 @@ def select_features(df: pd.DataFrame, target: str, num_cols: list, k: int = 10) 
     y = df[target]
     scores = mutual_info_classif(X, y, discrete_features=False)
     return pd.Series(scores, index=num_cols).sort_values(ascending=False).head(k)
-
-import json
-import os
-import numpy as np
-import pandas as pd
-
 
 class FraudFeatureEngineer:
     """
