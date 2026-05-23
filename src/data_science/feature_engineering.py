@@ -96,9 +96,7 @@ class FraudFeatureEngineer:
 
         data = df.copy()
 
-        # =========================================================
         # Amount Features
-        # =========================================================
 
         data["amt_per_pop"] = (
             data["amt"] / (data["city_pop"] + 1e-6)
@@ -116,9 +114,7 @@ class FraudFeatureEngineer:
             data["amt"].std()
         )
 
-        # =========================================================
         # User Behaviour Features
-        # =========================================================
 
         data["amt_user_mean"] = (
             data.groupby("cc_num")["amt"]
@@ -150,9 +146,7 @@ class FraudFeatureEngineer:
             .transform("count")
         )
 
-        # =========================================================
         # Datetime Features
-        # =========================================================
 
         data["trans_date_trans_time"] = pd.to_datetime(
             data["trans_date_trans_time"],
@@ -191,9 +185,7 @@ class FraudFeatureEngineer:
             ).dt.days // 365
         )
 
-        # =========================================================
         # Time Difference Features
-        # =========================================================
 
         data = data.sort_values(
             ["cc_num", "trans_date_trans_time"]
@@ -215,9 +207,7 @@ class FraudFeatureEngineer:
             .fillna(data["time_diff"].median())
         )
 
-        # =========================================================
         # Frequency Encoding
-        # =========================================================
 
         merchant_freq = (
             data["merchant"].value_counts()
@@ -246,9 +236,7 @@ class FraudFeatureEngineer:
             .map(city_freq)
         )
 
-        # =========================================================
         # Recent Transaction Features
-        # =========================================================
 
         data["txn_last_1h"] = (
             data.groupby("cc_num")
@@ -263,9 +251,7 @@ class FraudFeatureEngineer:
             )
         )
 
-        # =========================================================
         # One Hot Encoding
-        # =========================================================
 
         data = pd.get_dummies(
             data,
@@ -274,9 +260,7 @@ class FraudFeatureEngineer:
             dtype=int
         )
 
-        # =========================================================
         # Drop Unwanted Columns
-        # =========================================================
 
         data = data.drop(
             columns=self.drop_cols,
