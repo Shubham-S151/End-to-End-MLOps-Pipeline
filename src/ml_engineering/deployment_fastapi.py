@@ -4,9 +4,7 @@ from typing import List, Dict
 
 app = FastAPI(title="End-to-End ML Platform API")
 
-# -----------------------------
 # 1. Authentication & User Management
-# -----------------------------
 @app.post("/auth/signup")
 def signup(user: Dict):
     return {"message": "User registered", "user": user}
@@ -19,9 +17,7 @@ def login(credentials: Dict):
 def logout():
     return {"message": "Logged out"}
 
-# -----------------------------
 # 2. Data Management
-# -----------------------------
 @app.post("/data/upload")
 def upload_dataset(file: UploadFile = File(...)):
     return {"message": f"Dataset {file.filename} uploaded"}
@@ -34,9 +30,7 @@ def get_dataset(id: str):
 def validate_dataset(id: str):
     return {"dataset_id": id, "validation": "passed"}
 
-# -----------------------------
 # 3. Feature Engineering
-# -----------------------------
 @app.post("/features/create")
 def create_features(config: Dict):
     return {"message": "Feature set created", "config": config}
@@ -45,9 +39,7 @@ def create_features(config: Dict):
 def get_features(id: str):
     return {"feature_set_id": id, "features": ["f1", "f2"]}
 
-# -----------------------------
 # 4. Model Lifecycle
-# -----------------------------
 @app.post("/models/train")
 def train_model(config: Dict):
     return {"message": "Training started", "config": config}
@@ -56,9 +48,7 @@ def train_model(config: Dict):
 def get_model(id: str):
     return {"model_id": id, "status": "trained", "metrics": {"accuracy": 0.92}}
 
-# -----------------------------
 # 5. Experiment Tracking
-# -----------------------------
 @app.post("/experiments/create")
 def create_experiment(config: Dict):
     return {"message": "Experiment started", "config": config}
@@ -69,7 +59,6 @@ def get_experiment(id: str):
 
 # -----------------------------
 # 6. Model Deployment
-# -----------------------------
 @app.post("/deployments/create")
 def deploy_model(config: Dict):
     return {"message": "Model deployed", "config": config}
@@ -78,9 +67,7 @@ def deploy_model(config: Dict):
 def get_deployment(id: str):
     return {"deployment_id": id, "status": "running"}
 
-# -----------------------------
 # 7. Inference
-# -----------------------------
 @app.post("/predict")
 def predict(input: Dict):
     return {"prediction": "class_A", "confidence": 0.87}
@@ -89,9 +76,7 @@ def predict(input: Dict):
 def batch_predict(inputs: List[Dict]):
     return {"results": [{"prediction": "class_A"}, {"prediction": "class_B"}]}
 
-# -----------------------------
 # 8. Monitoring & Logging
-# -----------------------------
 @app.get("/monitoring/metrics")
 def get_metrics():
     return {"accuracy": 0.91, "latency_ms": 120, "drift": "none"}
@@ -100,9 +85,7 @@ def get_metrics():
 def get_logs():
     return {"logs": ["Inference started", "Inference completed"]}
 
-# -----------------------------
 # 9. Versioning
-# -----------------------------
 @app.get("/models/{id}/versions")
 def list_versions(id: str):
     return {"model_id": id, "versions": ["v1", "v2"]}
@@ -111,7 +94,6 @@ def list_versions(id: str):
 def create_version(id: str):
     return {"message": f"New version created for model {id}"}
 
-# -----------------------------
 # 10. System & Admin
 
 @app.get("/system/health")
