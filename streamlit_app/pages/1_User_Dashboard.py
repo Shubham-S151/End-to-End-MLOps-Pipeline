@@ -117,18 +117,18 @@ st.write("---")
 # =========================================================
 # UNIVARIATE ANALYSIS
 # =========================================================
-st.write("## Univariate Analysis")
+# st.write("## Univariate Analysis")
 
-fig = px.histogram(data, x="is_fraud", color="is_fraud")
-st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
+# fig = px.histogram(data, x="is_fraud", color="is_fraud")
+# st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-st.markdown("Severe class imbalance is present in the dataset.")
+# st.markdown("Severe class imbalance is present in the dataset.")
 
-if "amt" in data.columns:
-    fig = px.histogram(data, x="amt", nbins=50)
-    st.plotly_chart(fig, use_container_width=True)
+# if "amt" in data.columns:
+#     fig = px.histogram(data, x="amt", nbins=50)
+#     st.plotly_chart(fig, use_container_width=True)
 
-    st.markdown("Transaction amounts are highly skewed with extreme outliers.")
+#     st.markdown("Transaction amounts are highly skewed with extreme outliers.")
 
 # =========================================================
 # PIE CHART: GLOBAL FRAUD DISTRIBUTION
@@ -150,21 +150,21 @@ st.markdown("Fraud cases form a very small portion of total transactions.")
 # =========================================================
 # PIE CHART: FRAUD BY CATEGORY
 # =========================================================
-st.write("## Fraud by Category")
+# st.write("## Fraud by Category")
 
-if "category" in data.columns:
+# if "category" in data.columns:
 
-    fraud_category = data[data["is_fraud"] == 1]["category"].value_counts()
+#     fraud_category = data[data["is_fraud"] == 1]["category"].value_counts()
 
-    fig = px.pie(
-        names=fraud_category.index,
-        values=fraud_category.values,
-        hole=0.5
-    )
+#     fig = px.pie(
+#         names=fraud_category.index,
+#         values=fraud_category.values,
+#         hole=0.5
+#     )
 
-    st.plotly_chart(fig, use_container_width=True)
+#     st.plotly_chart(fig, use_container_width=True)
 
-    st.markdown("Fraud is concentrated in specific categories.")
+#     st.markdown("Fraud is concentrated in specific categories.")
 
 # =========================================================
 # CATEGORY SPLIT (FAST + INTERACTIVE)
