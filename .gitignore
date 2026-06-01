@@ -46,8 +46,3 @@ Thumbs.db
 
 # Others
 others/
-
-
-.github/workflows/*
-!.github/workflows/
-!.github/workflows/ci.yml
